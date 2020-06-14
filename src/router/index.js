@@ -3,12 +3,15 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
 const routes = [
+  // {
+  //   path: "/",
+  //   name: "Index",
+  //   component: () =>
+  //     import(/* webpackChunkName: "Index" */ "../views/index.vue")
+  // },
   {
     path: "/",
     name: "Home",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "Home" */ "../views/home/index.vue")
   }

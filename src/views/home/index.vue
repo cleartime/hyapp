@@ -6,7 +6,7 @@
     <headBanner />
     <centerMenu />
     <centerBanner />
-    <!-- <likes />  -->
+    <likes /> 
   </div>
 </template>
 
@@ -15,7 +15,7 @@ import centerMenu from "./centerMenu.vue";
 import Head from "./head.vue";
 import headMenu from "./headMenu.vue";
 import headBanner from "./headBanner.vue";
-import centerBanner from "./headBanner.vue";
+import centerBanner from "./centerBanner.vue";
 import likes from "./likes.vue";
 import search from "./search.vue";
 

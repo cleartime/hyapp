@@ -1,6 +1,6 @@
 <template>
   <div class="headBanner">
-    <img src="" alt="">
+    <img src="@/assets/img/home/headBanner.png" alt="">
   </div>
 </template>
 
@@ -14,7 +14,9 @@ export default {
 <style lang="scss" scoped>
 .headBanner {
   background: $bg2;
-  height: 100px;
   padding: 0 20px;
+  img {
+    width: 100%;
+  }
 }
 </style>

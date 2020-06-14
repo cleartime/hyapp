@@ -1,7 +1,6 @@
 <template>
   <div class="search">
-    <!-- <span class="iconfont icon-sousuo"></span> -->
-    <span class="iconfont">&#xe618;</span>
+    <span class="iconfont icon-sousuo"></span>
     <input type="text" class="input" placeholder="请输入宝贝标题">
   </div>
 </template>
@@ -20,17 +19,18 @@ export default {
   height: 40px;
   padding: 20px;
   .iconfont{
+    z-index: 1;
     position: absolute;
     left: 40px;
-    top: 5px;
+    top: 13px;
     width: 35px;
     height: 35px;
   }
   input{
     position: absolute;
-    padding-left: 60px;
+    padding-left: 45px;
     top: 0;
-    width: calc(100% - 40px - 60px);
+    width: calc(100% - 40px - 45px);
     height: 100%;
     font-size: 16px;
     border-radius: 25px

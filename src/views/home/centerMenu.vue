@@ -2,7 +2,7 @@
   <div class="centerMenu">
     <ul>
       <li v-for="(i, index) in list" :key="index">
-        <img src="" alt="" />
+        <img src="@/assets/img/home/centerMenu.png" alt="" />
         <span>{{ i.name }}</span>
       </li>
     </ul>
@@ -53,9 +53,7 @@ export default {
 
 <style lang="scss" scoped>
 .centerMenu {
-  height: 100px;
-  padding: 15px 0 40px;
-  height: 250px;
+  padding: 15px 0 0;
   color: $font2;
   ul {
     display: flex;
@@ -63,13 +61,16 @@ export default {
     li {
       width: 20%;
       text-align: center;
+      margin-bottom: 19px;
       img {
         display: block;
-        width: 67px;
-        height: 67px;
+        width: 33.5px;
+        height: 33.5px;
+        margin: auto;
+        margin-bottom: 5px;
       }
-      span{
-        margin-top: 5px
+      span {
+        color: $font2;
       }
     }
   }

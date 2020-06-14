@@ -1,7 +1,8 @@
 <template>
   <div class="headMenu">
     <span v-for="(i, index) in list" :class="active === index ? 'act':''" :key="index">{{ i.name }}</span>
-    <img src="" alt="" class="arrow">
+    <span class="iconfont icon-jiantoushang arrow" v-show="showAll" @click="showAll=!showAll"></span>
+    <span class="iconfont icon-ai-arrow-down arrow" v-show="!showAll" @click="showAll=!showAll"></span>
   </div>
 </template>
 
@@ -10,6 +11,7 @@ export default {
   name: "headMenu",
   data() {
     return {
+      showAll: false,
       list: [
         {
           name: "全部",
@@ -41,6 +43,7 @@ export default {
 
 <style lang="scss" scoped>
 .headMenu {
+  position: relative;
   height: 50px;
   background: $bg1;
   padding: 0 20px;
@@ -56,8 +59,14 @@ export default {
     }
   }
   .arrow{
+    z-index: 1;
+    position: absolute;
+    right: 20px;
+    top: 0;
     width: 20px;
     height: 10px;
+    &.icon-jiantoushang{
+    }
   }
 }
 </style>

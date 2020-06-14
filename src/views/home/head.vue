@@ -3,7 +3,7 @@
     <img src="" alt="" class="logo">
     <span class="title">XX商场</span>
     <div class="message">
-      <img src="" alt="">
+      <span class="iconfont icon-xiaoxi"></span>
       <span>消息</span>
     </div>
   </div>
@@ -25,20 +25,23 @@ export default {
   padding: 0 20px;
   color: #fff;
   .logo{
-    width: 100px;
-    height: 100%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
   }
   .message{
     text-align: right;
-    width: 100px;
+    width: 50px;
     height: 100%;
     display: flex;
     align-items: flex-end;
     justify-content: center;
     flex-direction: column;
-    img{
+    .iconfont{
       width: 45px;
       height: 40px;
+      font-size: 28px;
     }
   }
 }
