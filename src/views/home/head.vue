@@ -30,6 +30,10 @@ export default {
     border-radius: 50%;
     background: #fff;
   }
+  .title{
+    font-size: 20px;
+    font-weight: bold;
+  }
   .message{
     text-align: right;
     width: 50px;
