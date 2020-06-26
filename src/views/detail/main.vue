@@ -5,8 +5,8 @@
       <span>七匹狼短袖T恤2020夏装新款polo衫中青年男士休闲衣服潮流男装p</span>
     </h2>
     <div class="price">
-      <p class="afterPrice">券后价¥<span>99</span></p>
-      <p class="localPrice">拼多多价¥<span>100</span></p>
+      <p class="afterPrice">券后价 ¥ <span>99</span></p>
+      <p class="localPrice">拼多多价：<span>¥100</span></p>
       <p class="count">月销售<span>2836</span></p>
     </div>
     <div class="quan">
@@ -33,7 +33,7 @@ export default {
   background: #fff;
   padding: 20px;
   .title {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     line-height: 24px;
     img {
       position: relative;
@@ -61,6 +61,9 @@ export default {
       }
     }
     .localPrice {
+      span {
+        text-decoration: line-through;
+      }
       margin-left: 20px;
     }
     .count {
