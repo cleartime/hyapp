@@ -1,7 +1,7 @@
 <template>
   <div class="centerBanner">
     <ul>
-      <li v-for="(i, index) in list" :key="index">
+      <li v-for="(i, index) in list" :key="index" @click="link(i)">
         <img :src="i.url" alt="" />
       </li>
     </ul>
@@ -15,17 +15,22 @@ export default {
     return {
       list: [
         {
-          url: require('@/assets/img/home/centerBanner.png'),
+          url: require("@/assets/img/home/centerBanner.png")
         },
         {
-          url: require('@/assets/img/home/centerBanner.png'),
+          url: require("@/assets/img/home/centerBanner.png")
         },
         {
-          url: require('@/assets/img/home/centerBanner.png'),
-        },
-      ],
+          url: require("@/assets/img/home/centerBanner.png")
+        }
+      ]
     };
   },
+  methods: {
+    link() {
+      this.$router.push("/detail");
+    }
+  }
 };
 </script>
 
@@ -41,7 +46,7 @@ export default {
         width: 100%;
         height: 140px;
       }
-      &:not(:first-child){
+      &:not(:first-child) {
         margin-left: 5px;
       }
     }

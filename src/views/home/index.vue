@@ -1,34 +1,34 @@
 <template>
   <div class="home">
     <Head />
-    <search />
-    <headMenu />
-    <headBanner />
-    <centerMenu />
-    <centerBanner />
-    <likes /> 
+    <Search />
+    <HeadMenu />
+    <HeadBanner />
+    <CenterMenu />
+    <CenterBanner />
+    <Likes />
   </div>
 </template>
 
 <script>
-import centerMenu from "./centerMenu.vue";
+import CenterMenu from "./centerMenu.vue";
 import Head from "./head.vue";
-import headMenu from "./headMenu.vue";
-import headBanner from "./headBanner.vue";
-import centerBanner from "./centerBanner.vue";
-import likes from "./likes.vue";
-import search from "./search.vue";
+import HeadMenu from "./headMenu.vue";
+import HeadBanner from "./headBanner.vue";
+import CenterBanner from "./centerBanner.vue";
+import Likes from "./likes.vue";
+import Search from "./search.vue";
 
 export default {
   name: "Home",
   components: {
-    centerMenu,
+    CenterMenu,
     Head,
-    headMenu,
-    headBanner,
-    centerBanner,
-    likes,
-    search,
-  },
+    HeadMenu,
+    HeadBanner,
+    CenterBanner,
+    Likes,
+    Search
+  }
 };
 </script>

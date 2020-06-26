@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <router-view />
-    <div class="foot">
+    <div class="foot" v-if="showFoot">
       <ul>
         <li
           @click="link(i, index)"
@@ -14,7 +14,7 @@
         </li>
       </ul>
     </div>
-    <div class="noLogin">
+    <div class="noLogin" v-if="isLogin">
       <div class="noLogin-con">
         <span class="tip">登录开启品质生活</span>
         <span class="btn">立即登录</span>
@@ -24,41 +24,60 @@
 </template>
 
 <script>
+import Vue from "vue";
 export default {
   name: "App",
   components: {},
   data() {
     return {
+      isLogin: false,
       active: 0,
       list: [
         {
           name: "首页",
           icon: "shouye",
+          url: "/"
         },
         {
           name: "分类",
-          icon: "fenlei",
+          icon: "fenlei"
         },
         {
           name: "升级VIP",
-          icon: "tubiaozhizuomoban",
+          icon: "tubiaozhizuomoban"
         },
         {
           name: "一键发圈",
-          icon: "fenxiang",
+          icon: "fenxiang"
         },
         {
           name: "我的",
           icon: "wode",
-        },
-      ],
+          url: "/my"
+        }
+      ]
     };
+  },
+  computed: {
+    showFoot() {
+      return this.$route.meta.showFoot;
+    }
+  },
+  created() {
+    Vue.prototype.$go = this.$router.push;
   },
   methods: {
     link(item, index) {
+      if (item.url === this.$route.path) return;
+      this.$router.push(item.url);
       this.active = index;
-    },
+    }
   },
+  watch: {
+    $route() {
+      this.active = this.list.findIndex(item => item.url === this.$route.path);
+    }
+  }
 };
 </script>
 
@@ -123,7 +142,7 @@ export default {
       line-height: 75px;
       color: #fff;
       font-size: 20px;
-      .tip{
+      .tip {
         margin-left: 40px;
       }
       .btn {

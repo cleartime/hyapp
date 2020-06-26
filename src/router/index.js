@@ -12,8 +12,26 @@ const routes = [
   {
     path: "/",
     name: "Home",
+    meta: {
+      showFoot: true
+    },
     component: () =>
       import(/* webpackChunkName: "Home" */ "../views/home/index.vue")
+  },
+  {
+    path: "/my",
+    name: "My",
+    meta: {
+      showFoot: true
+    },
+    component: () =>
+      import(/* webpackChunkName: "My" */ "../views/my/index.vue")
+  },
+  {
+    path: "/detail",
+    name: "Detail",
+    component: () =>
+      import(/* webpackChunkName: "Detail" */ "../views/detail/index.vue")
   }
 ];
 
