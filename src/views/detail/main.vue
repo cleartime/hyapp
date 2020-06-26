@@ -7,7 +7,7 @@
     <div class="price">
       <p class="afterPrice">券后价 ¥ <span>99</span></p>
       <p class="localPrice">拼多多价：<span>¥100</span></p>
-      <p class="count">月销售<span>2836</span></p>
+      <p class="count">月销售：<span>2836</span></p>
     </div>
     <div class="quan">
       <p class="con">10元优惠券</p>
@@ -70,6 +70,10 @@ export default {
       flex: 1;
       text-align: right;
     }
+  }
+  .quan {
+    height: 110px;
+    background: url("../../assets/img/detail/quan.jpg") no-repeat;
   }
 }
 </style>
