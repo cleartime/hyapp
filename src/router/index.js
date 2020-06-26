@@ -30,6 +30,9 @@ const routes = [
   {
     path: "/detail",
     name: "Detail",
+    meta: {
+      opacity: true
+    },
     component: () =>
       import(/* webpackChunkName: "Detail" */ "../views/detail/index.vue")
   }

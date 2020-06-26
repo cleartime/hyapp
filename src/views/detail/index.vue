@@ -2,16 +2,16 @@
   <div class="my">
     <Banner />
     <Main />
-    <!-- <Detail /> -->
-    <!-- <Foot /> -->
+    <Detail />
+    <Foot />
   </div>
 </template>
 
 <script>
 import Banner from "./banner.vue";
 import Main from "./main.vue";
-import Detail from "./main.vue";
-import Foot from "./main.vue";
+import Detail from "./detail.vue";
+import Foot from "./foot.vue";
 
 export default {
   name: "Home",

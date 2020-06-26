@@ -1,6 +1,11 @@
 <template>
   <div class="banner">
-    <img src="@/assets/img/detail/banner.png" alt="" />
+    <img
+      src="@/assets/img/detail/banner.png"
+      alt=""
+      width="100%"
+      height="100%"
+    />
   </div>
 </template>
 

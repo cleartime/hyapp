@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Head v-if="!showFoot" />
     <router-view />
     <div class="foot" v-if="showFoot">
       <ul>
@@ -24,10 +25,12 @@
 </template>
 
 <script>
-import Vue from "vue";
+import Head from "@/component/common/head.vue";
 export default {
   name: "App",
-  components: {},
+  components: {
+    Head
+  },
   data() {
     return {
       isLogin: false,
@@ -63,9 +66,7 @@ export default {
       return this.$route.meta.showFoot;
     }
   },
-  created() {
-    Vue.prototype.$go = this.$router.push;
-  },
+  created() {},
   methods: {
     link(item, index) {
       if (item.url === this.$route.path) return;

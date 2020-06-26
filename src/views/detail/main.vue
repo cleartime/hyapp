@@ -10,7 +10,7 @@
       <p class="count">月销售：<span>2836</span></p>
     </div>
     <div class="quan">
-      <p class="con">10元优惠券</p>
+      <p class="con"><span>10</span>元优惠券</p>
       <p class="time">有效期：06月23日-07月31日</p>
       <p class="btn">立即领券</p>
     </div>
@@ -49,6 +49,7 @@ export default {
     }
   }
   .price {
+    margin-bottom: 20px;
     align-items: baseline;
     font-size: 16px;
     color: $font6;
@@ -74,6 +75,47 @@ export default {
   .quan {
     height: 110px;
     background: url("../../assets/img/detail/quan.jpg") no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    p:nth-child(1) {
+      padding-top: 30px;
+      color: #fff;
+      font-size: 20px;
+      width: 65%;
+      span {
+        font-weight: bold;
+      }
+    }
+    p:nth-child(2) {
+      padding-top: 15px;
+      color: rgba($color: #fff, $alpha: 0.5);
+      font-size: 12px;
+      width: 65%;
+    }
+    p:nth-child(3) {
+      color: #fff;
+      font-size: 20px;
+      width: 35%;
+      margin-left: 65%;
+      margin-top: -35px;
+    }
+  }
+  .tip {
+    margin-top: 20px;
+    font-size: 16px;
+    span:nth-child(1) {
+      font-weight: bold;
+      color: $font2;
+    }
+    span:nth-child(2) {
+      color: $font6;
+      margin-left: 5px;
+      margin-right: 10px;
+      line-height: 22px;
+    }
+    span:nth-child(3) {
+      color: $font7;
+    }
   }
 }
 </style>
