@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Head v-if="!showFoot" />
+    <Head v-if="showHead" />
     <router-view />
     <div class="foot" v-if="showFoot">
       <ul>
@@ -64,6 +64,9 @@ export default {
   computed: {
     showFoot() {
       return this.$route.meta.showFoot;
+    },
+    showHead() {
+      return this.$route.meta.showHead;
     }
   },
   created() {},

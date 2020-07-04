@@ -10,10 +10,20 @@ const routes = [
   //     import(/* webpackChunkName: "Index" */ "../views/index.vue")
   // },
   {
+    path: "/login",
+    name: "Login",
+    meta: {
+      showHead: false
+    },
+    component: () =>
+      import(/* webpackChunkName: "Login" */ "../views/login/index.vue")
+  },
+  {
     path: "/",
     name: "Home",
     meta: {
-      showFoot: true
+      showFoot: true,
+      showHead: false
     },
     component: () =>
       import(/* webpackChunkName: "Home" */ "../views/home/index.vue")
@@ -22,7 +32,8 @@ const routes = [
     path: "/my",
     name: "My",
     meta: {
-      showFoot: true
+      showFoot: true,
+      showHead: false
     },
     component: () =>
       import(/* webpackChunkName: "My" */ "../views/my/index.vue")
