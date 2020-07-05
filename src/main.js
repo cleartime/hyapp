@@ -2,6 +2,7 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
+// import "./router/guard";
 import "./until/vue";
 import "./assets/fontsdetail/iconfont.css";
 import "./assets/fonts/iconfont.css";
